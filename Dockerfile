@@ -1,5 +1,5 @@
-FROM alpine:3.14
-WORKDIR /myapp
-COPY target/*.jar app.jar
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+COPY myapp/target/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
